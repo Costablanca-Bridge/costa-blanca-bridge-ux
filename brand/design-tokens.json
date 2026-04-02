@@ -1,0 +1,122 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "brand": "CostablancaBridge",
+    "version": "1.0",
+    "date": "2026-04",
+    "description": "Design tokens for CostablancaBridge. Compatible with Style Dictionary, Theo, Figma Tokens, and W3C Design Tokens format."
+  },
+
+  "color": {
+    "navy": {
+      "dark":  { "value": "#0D2340", "type": "color", "description": "Deepest navy — dark backgrounds, footer" },
+      "base":  { "value": "#1B3A6B", "type": "color", "description": "Primary brand navy" },
+      "mid":   { "value": "#24487A", "type": "color", "description": "Mid-navy — cards, overlays" }
+    },
+    "gold": {
+      "base":  { "value": "#C8973A", "type": "color", "description": "Primary accent gold" },
+      "light": { "value": "#E8C46A", "type": "color", "description": "Light gold — hover, secondary accents" }
+    },
+    "neutral": {
+      "cream":      { "value": "#F4F1EB", "type": "color", "description": "Primary page background" },
+      "warm-gray":  { "value": "#E2DDD4", "type": "color", "description": "Dividers, subtle borders" },
+      "light-gray": { "value": "#E8E4DC", "type": "color", "description": "Card backgrounds on cream" },
+      "white":      { "value": "#FFFFFF", "type": "color", "description": "Pure white surfaces" },
+      "near-black": { "value": "#1A1A2E", "type": "color", "description": "Body text on light backgrounds" },
+      "mid-gray":   { "value": "#64748B", "type": "color", "description": "Secondary text, captions" },
+      "blue-gray":  { "value": "#8BA8C8", "type": "color", "description": "Muted text on dark backgrounds" },
+      "light-blue": { "value": "#C8D8F0", "type": "color", "description": "Subtle highlights on dark backgrounds" }
+    },
+    "semantic": {
+      "success": { "value": "#22863A", "type": "color" },
+      "warning": { "value": "#D97706", "type": "color" },
+      "error":   { "value": "#DC2626", "type": "color" }
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "display": { "value": "'Playfair Display', Cambria, Georgia, serif", "type": "fontFamily" },
+      "body":    { "value": "'Inter', Calibri, 'Segoe UI', system-ui, sans-serif", "type": "fontFamily" },
+      "mono":    { "value": "'JetBrains Mono', 'Fira Code', monospace", "type": "fontFamily" }
+    },
+    "fontSize": {
+      "xs":   { "value": "12px", "type": "fontSize" },
+      "sm":   { "value": "14px", "type": "fontSize" },
+      "base": { "value": "16px", "type": "fontSize" },
+      "lg":   { "value": "18px", "type": "fontSize" },
+      "xl":   { "value": "20px", "type": "fontSize" },
+      "2xl":  { "value": "24px", "type": "fontSize" },
+      "3xl":  { "value": "30px", "type": "fontSize" },
+      "4xl":  { "value": "36px", "type": "fontSize" },
+      "5xl":  { "value": "48px", "type": "fontSize" },
+      "6xl":  { "value": "60px", "type": "fontSize" },
+      "7xl":  { "value": "72px", "type": "fontSize" }
+    },
+    "fontWeight": {
+      "normal":    { "value": 400, "type": "fontWeight" },
+      "medium":    { "value": 500, "type": "fontWeight" },
+      "semibold":  { "value": 600, "type": "fontWeight" },
+      "bold":      { "value": 700, "type": "fontWeight" },
+      "extrabold": { "value": 800, "type": "fontWeight" }
+    },
+    "lineHeight": {
+      "tight":   { "value": 1.1, "type": "lineHeight" },
+      "snug":    { "value": 1.25, "type": "lineHeight" },
+      "normal":  { "value": 1.5, "type": "lineHeight" },
+      "relaxed": { "value": 1.65, "type": "lineHeight" },
+      "loose":   { "value": 1.8, "type": "lineHeight" }
+    },
+    "letterSpacing": {
+      "tight":   { "value": "-0.02em", "type": "letterSpacing" },
+      "normal":  { "value": "0em", "type": "letterSpacing" },
+      "wide":    { "value": "0.04em", "type": "letterSpacing" },
+      "wider":   { "value": "0.08em", "type": "letterSpacing" },
+      "widest":  { "value": "0.16em", "type": "letterSpacing" }
+    }
+  },
+
+  "spacing": {
+    "1":  { "value": "4px" },
+    "2":  { "value": "8px" },
+    "3":  { "value": "12px" },
+    "4":  { "value": "16px" },
+    "5":  { "value": "20px" },
+    "6":  { "value": "24px" },
+    "8":  { "value": "32px" },
+    "10": { "value": "40px" },
+    "12": { "value": "48px" },
+    "16": { "value": "64px" },
+    "20": { "value": "80px" },
+    "24": { "value": "96px" },
+    "32": { "value": "128px" },
+    "40": { "value": "160px" }
+  },
+
+  "borderRadius": {
+    "sm":   { "value": "4px" },
+    "md":   { "value": "8px" },
+    "lg":   { "value": "12px" },
+    "xl":   { "value": "16px" },
+    "2xl":  { "value": "20px" },
+    "full": { "value": "9999px" }
+  },
+
+  "shadow": {
+    "xs":      { "value": "0 1px 3px rgba(0,0,0,0.08)" },
+    "sm":      { "value": "0 2px 8px rgba(0,0,0,0.08)" },
+    "md":      { "value": "0 4px 16px rgba(0,0,0,0.10)" },
+    "lg":      { "value": "0 8px 32px rgba(0,0,0,0.12)" },
+    "xl":      { "value": "0 16px 48px rgba(0,0,0,0.16)" },
+    "gold":    { "value": "0 4px 24px rgba(200,151,58,0.20)" },
+    "gold-lg": { "value": "0 8px 40px rgba(200,151,58,0.30)" }
+  },
+
+  "breakpoint": {
+    "sm":  { "value": "640px" },
+    "md":  { "value": "768px" },
+    "lg":  { "value": "1024px" },
+    "xl":  { "value": "1280px" },
+    "2xl": { "value": "1440px" }
+  }
+}

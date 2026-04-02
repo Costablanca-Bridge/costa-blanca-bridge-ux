@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Costa Blanca Bridge — Connecting Worlds. Powering Prosperity.</title>
+  <meta name="description" content="The tech-powered bridge for companies and individuals accessing Europe through Spain. Legal services, market entry, cross-border deals, and workforce. Principal partner, not just a service provider.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── DESIGN TOKENS ────────────────────────────────────────────────────── */
+    :root {
+      /* Brand colours — extracted from official logo files */
+      --color-navy-dark:    #0D2340;   /* hero bg, deepest backgrounds */
+      --color-navy:         #1B3A6B;   /* section backgrounds, headings */
+      --color-navy-mid:     #24487A;   /* card backgrounds on dark */
+      --color-gold:         #C4965A;   /* logo bridge icon gold, all accents */
+      --color-gold-light:   #E0B87A;   /* hover state */
+      --color-cream:        #F5F1EA;   /* light section bg, logo light version */
+      --color-warm-gray:    #E2DDD4;   /* borders on light */
+      --color-white:        #FFFFFF;
+      --color-near-black:   #1A1A2E;
+      --color-mid-gray:     #64748B;
+      --color-blue-gray:    #8BA8C8;   /* body text on dark */
+      --color-navy-10:      rgba(27, 58, 107, 0.10);
+      --color-gold-20:      rgba(196, 150, 90, 0.20);
+      --color-gold-12:      rgba(196, 150, 90, 0.12);
+      --color-white-10:     rgba(255, 255, 255, 0.10);
+      --color-white-15:     rgba(255, 255, 255, 0.15);
+      --font-display:       'Playfair Display', Georgia, serif;
+      --font-body:          'Inter', 'Segoe UI', system-ui, sans-serif;
+      --nav-height:         72px;
+      --transition-fast:    150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-base:    200ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-reveal:  400ms cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-sm:          0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md:          0 4px 16px rgba(0,0,0,0.10);
+      --shadow-gold:        0 4px 24px rgba(196, 150, 90, 0.18);
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-near-black);
+      background: var(--color-white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
+
+    /* ─── LAYOUT ─────────────────────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+    }
+    @media (max-width: 768px) { .container { padding-inline: 1rem; } }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(13, 35, 64, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      height: var(--nav-height);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    /* Logo */
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav__logo-icon {
+      width: 44px;
+      height: auto;
+      flex-shrink: 0;
+    }
+    .nav__logo-text-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav__logo-name {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--color-white);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .nav__logo-tagline {
+      font-family: var(--font-body);
+      font-size: 0.5625rem;
+      font-weight: 500;
+      color: var(--color-gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+    .nav__links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-white);
+      opacity: 0.82;
+      transition: opacity var(--transition-fast);
+    }
+    .nav__links a:hover { opacity: 1; }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      background: var(--color-gold);
+      color: var(--color-navy-dark);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background var(--transition-base), transform var(--transition-fast);
+      white-space: nowrap;
+    }
+    .btn-nav:hover { background: var(--color-gold-light); transform: translateY(-1px); }
+
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 40px; height: 40px; padding: 8px;
+    }
+    .nav__hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--color-white); border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav__links, .nav__right .btn-nav { display: none; }
+      .nav__hamburger { display: flex; }
+      .nav__logo-name { font-size: 0.875rem; }
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0; z-index: 300;
+      background: var(--color-navy-dark);
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+    }
+    .mobile-menu.is-open { display: flex; }
+    .mobile-menu__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
+    .mobile-menu__close { color: var(--color-white); font-size: 1.5rem; opacity: 0.7; }
+    .mobile-menu__links { display: flex; flex-direction: column; }
+    .mobile-menu__links a {
+      font-size: 1.5rem; font-family: var(--font-display); font-weight: 700;
+      color: var(--color-white); padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+    }
+    .mobile-menu__cta { margin-top: 2.5rem; }
+    .mobile-menu__cta a {
+      display: block; text-align: center;
+      background: var(--color-gold); color: var(--color-navy-dark);
+      font-size: 1rem; font-weight: 600; padding: 1rem 2rem; border-radius: 4px;
+    }
+
+    /* ─── BUTTONS ─────────────────────────────────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--color-gold); color: var(--color-navy-dark);
+      font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+      padding: 0.875rem 2rem; border-radius: 4px;
+      text-decoration: none; border: 2px solid transparent;
+      transition: background var(--transition-base), transform var(--transition-fast);
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--color-gold-light); transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary--lg { padding: 1.0625rem 2.375rem; font-size: 1.0625rem; }
+
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--color-white);
+      font-family: var(--font-body); font-size: 1rem; font-weight: 500;
+      padding: 0.875rem 2rem; border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.45); text-decoration: none;
+      transition: border-color var(--transition-base), background var(--transition-base);
+    }
+    .btn-secondary:hover { border-color: var(--color-white); background: rgba(255,255,255,0.07); }
+
+    /* ─── SECTION LABELS ─────────────────────────────────────────────────────── */
+    .section-label {
+      display: block; font-family: var(--font-body);
+      font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--color-gold); margin-bottom: 0.875rem;
+    }
+
+    .gold-rule {
+      display: block; width: 64px; height: 3px;
+      background: var(--color-gold); border: none; margin: 1.25rem 0 1.5rem;
+    }
+
+    /* ─── SECTIONS ────────────────────────────────────────────────────────────── */
+    .section { padding: 6rem 0; }
+    .section--sm  { padding: 4rem 0; }
+    .section--cream     { background: var(--color-cream); }
+    .section--white     { background: var(--color-white); }
+    .section--navy-dark { background: var(--color-navy-dark); }
+    .section--gold      { background: var(--color-gold); }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      font-weight: 700; line-height: 1.2; letter-spacing: -0.01em;
+      color: var(--color-navy);
+    }
+    .section-heading--white { color: var(--color-white); }
+    .section-header { margin-bottom: 3.5rem; }
+
+    /* ─── HERO ─────────────────────────────────────────────────────────────────  */
+    .hero {
+      background: linear-gradient(135deg, #0D2340 0%, #152A4A 60%, #1B3A6B 100%);
+      padding: 7rem 0 5rem; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -8%; right: -6%;
+      width: 540px; height: 540px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(27,58,107,0.7) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -15%; right: 20%;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,150,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner {
+      display: grid; grid-template-columns: 1fr 420px;
+      gap: 4rem; align-items: center; position: relative; z-index: 1;
+    }
+    .hero__eyebrow {
+      font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--color-gold); margin-bottom: 1.25rem;
+    }
+    .hero__headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+      font-weight: 700; line-height: 1.07; letter-spacing: -0.02em;
+      color: var(--color-white);
+    }
+    .hero__headline em { font-style: italic; color: var(--color-gold); }
+    .hero__body {
+      font-size: 1.125rem; line-height: 1.65;
+      color: var(--color-blue-gray); max-width: 52ch;
+      margin-top: 1.75rem; margin-bottom: 2.25rem;
+    }
+    .hero__ctas { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+    .hero__link {
+      font-size: 0.9375rem; color: var(--color-white); font-weight: 500;
+      opacity: 0.75; transition: opacity var(--transition-fast);
+    }
+    .hero__link:hover { opacity: 1; text-decoration: underline; }
+
+    /* Hero visual card */
+    .hero__visual { position: relative; }
+    .hero__visual-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(196,150,90,0.22);
+      border-radius: 14px; padding: 2rem;
+      backdrop-filter: blur(8px);
+    }
+    .hero__visual-logo {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding-bottom: 1.25rem; margin-bottom: 1.375rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero__visual-logo-text {
+      font-family: var(--font-body); font-size: 0.875rem;
+      font-weight: 600; color: var(--color-white); line-height: 1.3;
+    }
+    .hero__visual-logo-text span {
+      display: block; font-size: 0.5625rem; font-weight: 500;
+      color: var(--color-gold); letter-spacing: 0.14em; text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .hero__visual-lines { display: flex; flex-direction: column; gap: 0; }
+    .hero__visual-row {
+      display: flex; align-items: flex-start; gap: 0.875rem;
+      padding: 0.875rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero__visual-row:last-child { border-bottom: none; }
+    .hero__visual-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--color-gold); flex-shrink: 0; margin-top: 0.35rem;
+    }
+    .hero__visual-copy { font-size: 0.8125rem; color: var(--color-blue-gray); line-height: 1.45; }
+    .hero__visual-copy strong { color: var(--color-white); font-weight: 500; }
+
+    /* Hero stat strip */
+    .hero__stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.1); margin-top: 5rem;
+    }
+    .hero__stat { padding: 1.5rem 0; }
+    .hero__stat + .hero__stat { padding-left: 2rem; border-left: 1px solid rgba(255,255,255,0.1); }
+    .hero__stat-number {
+      font-family: var(--font-display); font-size: 1.875rem; font-weight: 700;
+      color: var(--color-gold); line-height: 1; margin-bottom: 0.375rem;
+    }
+    .hero__stat-label { font-size: 0.8125rem; color: var(--color-blue-gray); line-height: 1.4; }
+
+    @media (max-width: 900px) {
+      .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero__visual { display: none; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 5rem 0 3.5rem; }
+      .hero__stats { grid-template-columns: 1fr; }
+      .hero__stat { border-left: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); padding-left: 0 !important; }
+      .hero__stat:last-child { border-bottom: none; }
+      .hero__ctas { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ─── WHO WE SERVE ────────────────────────────────────────────────────────── */
+    .personas-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+    @media (max-width: 1024px) { .personas-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px)  { .personas-grid { grid-template-columns: 1fr; } }
+
+    .persona-card {
+      background: var(--color-white); border: 1px solid var(--color-warm-gray);
+      border-radius: 12px; padding: 1.875rem;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .persona-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .persona-card__icon {
+      width: 44px; height: 44px; background: rgba(27,58,107,0.07);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.125rem;
+    }
+    .persona-card__icon svg { width: 21px; height: 21px; fill: var(--color-navy); }
+    .persona-card__title {
+      font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+      color: var(--color-navy); margin-bottom: 0.625rem; line-height: 1.3;
+    }
+    .persona-card__desc {
+      font-size: 0.875rem; color: var(--color-mid-gray); line-height: 1.55; margin-bottom: 1.25rem;
+    }
+    .persona-card__link { font-size: 0.8125rem; font-weight: 600; color: var(--color-gold); }
+    .persona-card__link:hover { text-decoration: underline; }
+
+    /* ─── FOUR PIPELINES ──────────────────────────────────────────────────────── */
+    .pipelines-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+    @media (max-width: 1024px) { .pipelines-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px)  { .pipelines-grid { grid-template-columns: 1fr; } }
+
+    .pipeline-card {
+      background: var(--color-white); border: 1px solid var(--color-warm-gray);
+      border-top: 4px solid var(--color-gold); border-radius: 12px; padding: 2rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .pipeline-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pipeline-card__number {
+      font-size: 0.6875rem; font-weight: 600; color: var(--color-gold);
+      letter-spacing: 0.1em; margin-bottom: 0.125rem;
+    }
+    .pipeline-card__title {
+      font-family: var(--font-display); font-size: 1.3125rem; font-weight: 700; color: var(--color-navy);
+    }
+    .pipeline-card__subtitle {
+      font-size: 0.75rem; font-weight: 600; color: var(--color-gold);
+      text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 0.5rem;
+    }
+    .pipeline-card .gold-rule { margin: 0.75rem 0 0.875rem; }
+    .pipeline-card__list { list-style: none; display: flex; flex-direction: column; gap: 0.375rem; flex: 1; }
+    .pipeline-card__list li {
+      font-size: 0.875rem; color: var(--color-mid-gray);
+      padding-left: 1rem; position: relative; line-height: 1.45;
+    }
+    .pipeline-card__list li::before {
+      content: ''; position: absolute; left: 0; top: 0.55em;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--color-gold);
+    }
+    .pipeline-card__link { font-size: 0.875rem; font-weight: 600; color: var(--color-navy); margin-top: 1rem; }
+    .pipeline-card__link:hover { color: var(--color-gold); }
+
+    /* ─── PRINCIPAL MODEL ─────────────────────────────────────────────────────── */
+    .principal {
+      background: var(--color-navy-dark); padding: 7rem 0;
+      position: relative; overflow: hidden;
+    }
+    .principal::before {
+      content: ''; position: absolute; top: 50%; right: -5%;
+      transform: translateY(-50%); width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(27,58,107,0.6) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .principal__inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center; position: relative; z-index: 1;
+    }
+    .principal__body {
+      font-size: 1rem; line-height: 1.7; color: var(--color-blue-gray);
+      margin: 1.5rem 0 2rem; max-width: 50ch;
+    }
+
+    .tier-progression {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(196,150,90,0.2); border-radius: 14px; padding: 2rem;
+    }
+    .tier-progression__title {
+      font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--color-gold); margin-bottom: 1.5rem;
+    }
+    .tier-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.125rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .tier-item:last-child { border-bottom: none; }
+    .tier-item__number {
+      font-family: var(--font-display); font-size: 1.3125rem; font-weight: 700;
+      color: var(--color-gold); line-height: 1; min-width: 2rem; margin-top: 2px;
+    }
+    .tier-item__title {
+      font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700;
+      color: var(--color-white); margin-bottom: 0.25rem;
+    }
+    .tier-item__desc { font-size: 0.8125rem; color: var(--color-blue-gray); line-height: 1.45; margin-bottom: 0.375rem; }
+    .tier-item__tag {
+      display: inline-block; font-size: 0.6875rem; font-weight: 600;
+      letter-spacing: 0.05em; color: var(--color-gold);
+      background: rgba(196,150,90,0.1); border: 1px solid rgba(196,150,90,0.22);
+      border-radius: 100px; padding: 0.2rem 0.6rem;
+    }
+    .tier-arrow { padding: 0.2rem 0 0.2rem 3rem; opacity: 0.4; font-size: 0.9rem; color: var(--color-gold); }
+
+    @media (max-width: 900px) { .principal__inner { grid-template-columns: 1fr; gap: 3rem; } }
+
+    /* ─── SPAIN STATS ─────────────────────────────────────────────────────────── */
+    .stats-band { background: var(--color-gold); padding: 5rem 0; }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; margin-bottom: 2.75rem;
+    }
+    @media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+    .stat-item__number {
+      font-family: var(--font-display); font-size: clamp(2.25rem, 4vw, 3rem);
+      font-weight: 700; color: var(--color-navy-dark); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .stat-item__label { font-size: 0.875rem; color: rgba(13,35,64,0.68); line-height: 1.45; max-width: 22ch; }
+    .stats-band__caption {
+      font-family: var(--font-display); font-size: 1rem; font-style: italic;
+      color: rgba(13,35,64,0.76); max-width: 74ch; text-align: center; margin-inline: auto; line-height: 1.6;
+    }
+
+    /* ─── CASE STUDIES ────────────────────────────────────────────────────────── */
+    .cases-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+    @media (max-width: 768px) { .cases-grid { grid-template-columns: 1fr; } }
+
+    .case-card { border-radius: 12px; padding: 2.25rem; }
+    .case-card--dark { background: var(--color-navy); border: 1px solid rgba(196,150,90,0.18); }
+    .case-card--light { background: var(--color-white); border: 1px solid var(--color-warm-gray); }
+    .case-card__tag {
+      display: inline-block; font-size: 0.6875rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold);
+      background: rgba(196,150,90,0.1); border: 1px solid rgba(196,150,90,0.22);
+      border-radius: 100px; padding: 0.3rem 0.8rem; margin-bottom: 1.25rem;
+    }
+    .case-card__title {
+      font-family: var(--font-display); font-size: 1.125rem; font-weight: 700;
+      line-height: 1.3; margin-bottom: 1rem;
+    }
+    .case-card--dark .case-card__title { color: var(--color-white); }
+    .case-card--light .case-card__title { color: var(--color-navy); }
+    .case-card__result { font-size: 0.875rem; line-height: 1.6; }
+    .case-card--dark .case-card__result { color: var(--color-blue-gray); }
+    .case-card--light .case-card__result { color: var(--color-mid-gray); }
+    .case-card__metric {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid;
+    }
+    .case-card--dark .case-card__metric { border-color: rgba(255,255,255,0.1); }
+    .case-card--light .case-card__metric { border-color: var(--color-warm-gray); }
+    .case-card__metric-number {
+      font-family: var(--font-display); font-size: 1.875rem; font-weight: 700;
+      color: var(--color-gold); line-height: 1;
+    }
+    .case-card__metric-label { font-size: 0.8125rem; color: var(--color-mid-gray); }
+    .case-card--dark .case-card__metric-label { color: var(--color-blue-gray); }
+    .cases-cta { text-align: center; margin-top: 2.5rem; }
+    .cases-cta a {
+      font-size: 0.9375rem; font-weight: 600; color: var(--color-navy);
+      border-bottom: 1.5px solid var(--color-gold); padding-bottom: 1px;
+    }
+    .cases-cta a:hover { color: var(--color-gold); }
+
+    /* ─── CLOSING CTA ─────────────────────────────────────────────────────────── */
+    .closing-cta {
+      background: var(--color-navy-dark); padding: 6.5rem 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .closing-cta::before {
+      content: ''; position: absolute; bottom: -15%; left: -5%;
+      width: 350px; height: 350px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(27,58,107,0.6) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .closing-cta__inner { position: relative; z-index: 1; }
+    .closing-cta__heading {
+      font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--color-white); letter-spacing: -0.02em;
+      line-height: 1.15; margin-bottom: 0.75rem;
+    }
+    .closing-cta__sub {
+      font-family: var(--font-display); font-size: 1.125rem; font-style: italic;
+      color: var(--color-gold); margin-bottom: 2.5rem;
+    }
+    .closing-cta__buttons {
+      display: flex; justify-content: center; align-items: center;
+      gap: 1.25rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .closing-cta__contact { font-size: 0.8125rem; color: var(--color-blue-gray); }
+    .closing-cta__contact a { color: var(--color-blue-gray); text-decoration: underline; }
+
+    /* ─── FOOTER ──────────────────────────────────────────────────────────────── */
+    .footer { background: #0A0F1E; padding: 4.5rem 0 2rem; }
+    .footer__grid {
+      display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    @media (max-width: 900px)  { .footer__grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px)  { .footer__grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+    .footer__brand { display: flex; flex-direction: column; gap: 0.875rem; }
+    .footer__logo-row { display: flex; align-items: center; gap: 0.75rem; }
+    .footer__logo-icon { width: 40px; height: auto; }
+    .footer__logo-name {
+      font-family: var(--font-body); font-size: 0.9375rem; font-weight: 700;
+      color: var(--color-white); line-height: 1.2;
+    }
+    .footer__logo-name span {
+      display: block; font-size: 0.5625rem; font-weight: 500;
+      color: var(--color-gold); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 2px;
+    }
+    .footer__tagline { font-size: 0.8125rem; color: rgba(255,255,255,0.36); line-height: 1.55; max-width: 28ch; }
+    .footer__social a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.45);
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .footer__social a:hover { border-color: var(--color-gold); color: var(--color-gold); }
+    .footer__social svg { width: 16px; height: 16px; fill: currentColor; }
+    .footer__col-title {
+      font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-gold); margin-bottom: 1.125rem;
+    }
+    .footer__col-links { display: flex; flex-direction: column; gap: 0.625rem; }
+    .footer__col-links a { font-size: 0.875rem; color: rgba(255,255,255,0.5); transition: color var(--transition-fast); }
+    .footer__col-links a:hover { color: var(--color-white); }
+    .footer__bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 1.75rem; flex-wrap: wrap; gap: 0.75rem;
+    }
+    .footer__copy { font-size: 0.8125rem; color: rgba(255,255,255,0.28); }
+    .footer__legal { display: flex; gap: 1.5rem; }
+    .footer__legal a { font-size: 0.8125rem; color: rgba(255,255,255,0.33); }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ─── REVEAL ──────────────────────────────────────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity var(--transition-reveal), transform var(--transition-reveal);
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 80ms; }
+    .reveal-d2 { transition-delay: 160ms; }
+    .reveal-d3 { transition-delay: 240ms; }
+    .reveal-d4 { transition-delay: 320ms; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ BRIDGE LOGO SVG — defined once, reused via <use> ═══════════════════ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="bridge-icon" viewBox="0 0 120 72">
+      <!-- Road / baseline with slight curve -->
+      <path d="M4,58 Q60,54 116,58" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <!-- Main arch -->
+      <path d="M10,58 Q60,6 110,58" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <!-- Vertical cables (left to right, symmetric) -->
+      <line x1="23"  y1="46"  x2="23"  y2="57" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="36"  y1="31"  x2="36"  y2="56" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="48"  y1="20"  x2="48"  y2="56" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="60"  y1="15"  x2="60"  y2="55" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="72"  y1="20"  x2="72"  y2="56" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="84"  y1="31"  x2="84"  y2="56" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="97"  y1="46"  x2="97"  y2="57" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- Wing feet at base -->
+      <path d="M4,58 Q7,65 13,60"  stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M116,58 Q113,65 107,60" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+
+  <!-- ═══════════════════════════════════════════════════════ NAVIGATION -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner container">
+
+      <a href="/" class="nav__logo" aria-label="Costa Blanca Bridge home">
+        <svg class="nav__logo-icon" viewBox="0 0 120 72" color="#C4965A" aria-hidden="true">
+          <use href="#bridge-icon"/>
+        </svg>
+        <div class="nav__logo-text-block">
+          <span class="nav__logo-name">Costa Blanca Bridge</span>
+          <span class="nav__logo-tagline">Connecting Worlds</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="/services/land">Services</a></li>
+        <li><a href="/how-we-work">How We Work</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/insights">Insights</a></li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <a href="/contact" class="btn-nav">Book a Call</a>
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" id="menuToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <div class="mobile-menu__header">
+      <a href="/" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 120 72" color="#C4965A" aria-hidden="true">
+          <use href="#bridge-icon"/>
+        </svg>
+        <span class="nav__logo-name" style="color:#fff;font-size:0.9rem;">Costa Blanca Bridge</span>
+      </a>
+      <button class="mobile-menu__close" id="menuClose" aria-label="Close">✕</button>
+    </div>
+    <nav class="mobile-menu__links">
+      <a href="/services/land">Services</a>
+      <a href="/how-we-work">How We Work</a>
+      <a href="/about">About</a>
+      <a href="/insights">Insights</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="mobile-menu__cta"><a href="/contact">Book a Discovery Call</a></div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════ HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="container">
+      <div class="hero__inner">
+
+        <div>
+          <p class="hero__eyebrow">Costa Blanca Bridge · Connecting Worlds</p>
+          <h1 class="hero__headline">
+            Connecting Worlds.<br>
+            <em>Powering Prosperity.</em>
+          </h1>
+          <hr class="gold-rule" aria-hidden="true">
+          <p class="hero__body">
+            The tech-powered bridge linking global capital, companies, and citizens to European opportunity — through Spain's most dynamic corridor.
+          </p>
+          <div class="hero__ctas">
+            <a href="/contact" class="btn-primary btn-primary--lg">Book a Discovery Call</a>
+            <a href="/services/land" class="hero__link">Explore our services →</a>
+          </div>
+        </div>
+
+        <!-- Right visual card -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__visual-card">
+            <div class="hero__visual-logo">
+              <svg style="width:52px;height:auto;color:#C4965A;" viewBox="0 0 120 72">
+                <use href="#bridge-icon"/>
+              </svg>
+              <div class="hero__visual-logo-text">
+                Costa Blanca Bridge
+                <span>Connecting Worlds</span>
+              </div>
+            </div>
+            <div class="hero__visual-lines">
+              <div class="hero__visual-row">
+                <div class="hero__visual-dot"></div>
+                <div class="hero__visual-copy"><strong>UK &amp; European Companies</strong><br>Post-Brexit EU headquarters — 21 days</div>
+              </div>
+              <div class="hero__visual-row">
+                <div class="hero__visual-dot"></div>
+                <div class="hero__visual-copy"><strong>Digital Nomads &amp; Founders</strong><br>Spanish residency + company in 45 days</div>
+              </div>
+              <div class="hero__visual-row">
+                <div class="hero__visual-dot"></div>
+                <div class="hero__visual-copy"><strong>Trade &amp; Investment Partners</strong><br>EU market SPVs and co-investment deals</div>
+              </div>
+              <div class="hero__visual-row">
+                <div class="hero__visual-dot"></div>
+                <div class="hero__visual-copy"><strong>Relocating Individuals</strong><br>Full Costa Blanca settlement, 30–60 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stat strip -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-number">€40B</div>
+          <div class="hero__stat-label">Foreign direct investment into Spain, 2024</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number">450M+</div>
+          <div class="hero__stat-label">EU consumers accessible via Spanish entity</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number">30–60</div>
+          <div class="hero__stat-label">Day settlement guarantee for new residents</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ WHO WE SERVE -->
+  <section class="section section--cream" aria-labelledby="personas-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Who We Serve</span>
+        <h2 class="section-heading" id="personas-heading">Global Clients. European Outcomes.</h2>
+      </div>
+      <div class="personas-grid">
+        <div class="persona-card reveal reveal-d1">
+          <div class="persona-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14H3zm2-2h14V8.3l-7-3.1-7 3.1V19zm7-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+          </div>
+          <h3 class="persona-card__title">UK &amp; European Companies</h3>
+          <p class="persona-card__desc">Post-Brexit restructuring, EU headquarters, cross-border operations. A Spanish entity gives you single-market access from day one.</p>
+          <a href="/services/land" class="persona-card__link">Learn more →</a>
+        </div>
+        <div class="persona-card reveal reveal-d2">
+          <div class="persona-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <h3 class="persona-card__title">Digital Nomads &amp; Founders</h3>
+          <p class="persona-card__desc">Spanish residency, company formation, EU banking in 30–60 days. Work from Europe legally, bank like a local, grow globally.</p>
+          <a href="/services/people" class="persona-card__link">Learn more →</a>
+        </div>
+        <div class="persona-card reveal reveal-d3">
+          <div class="persona-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+          </div>
+          <h3 class="persona-card__title">Trade &amp; Investment Partners</h3>
+          <p class="persona-card__desc">Import SPVs, co-investment structures, EU market corridors. We don't just open the door — we co-invest in the deals we originate.</p>
+          <a href="/how-we-work" class="persona-card__link">Learn more →</a>
+        </div>
+        <div class="persona-card reveal reveal-d4">
+          <div class="persona-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <h3 class="persona-card__title">Relocating Individuals</h3>
+          <p class="persona-card__desc">Non-Lucrative Visa, lifestyle relocation, full Costa Blanca settlement. One partner for every step — legal, banking, housing, life.</p>
+          <a href="/services/people" class="persona-card__link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ FOUR PIPELINES -->
+  <section class="section section--white" aria-labelledby="pipelines-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Services</span>
+        <h2 class="section-heading" id="pipelines-heading">Four Pipelines. One Bridge.</h2>
+      </div>
+      <div class="pipelines-grid">
+        <div class="pipeline-card reveal reveal-d1">
+          <span class="pipeline-card__number">01</span>
+          <h3 class="pipeline-card__title">LAND</h3>
+          <p class="pipeline-card__subtitle">Market Entry</p>
+          <hr class="gold-rule" aria-hidden="true">
+          <ul class="pipeline-card__list">
+            <li>Company formation (SL / SA)</li>
+            <li>NIE / NIF processing</li>
+            <li>Visa &amp; licensing</li>
+            <li>Spanish banking setup</li>
+          </ul>
+          <a href="/services/land" class="pipeline-card__link">Explore LAND →</a>
+        </div>
+        <div class="pipeline-card reveal reveal-d2">
+          <span class="pipeline-card__number">02</span>
+          <h3 class="pipeline-card__title">OPERATE</h3>
+          <p class="pipeline-card__subtitle">Business Operations</p>
+          <hr class="gold-rule" aria-hidden="true">
+          <ul class="pipeline-card__list">
+            <li>Ongoing tax &amp; compliance</li>
+            <li>Legal retainer services</li>
+            <li>Payroll &amp; HR support</li>
+            <li>Annual accounts</li>
+          </ul>
+          <a href="/services/operate" class="pipeline-card__link">Explore OPERATE →</a>
+        </div>
+        <div class="pipeline-card reveal reveal-d3">
+          <span class="pipeline-card__number">03</span>
+          <h3 class="pipeline-card__title">TRADE</h3>
+          <p class="pipeline-card__subtitle">Cross-Border Deals</p>
+          <hr class="gold-rule" aria-hidden="true">
+          <ul class="pipeline-card__list">
+            <li>Import SPV structures</li>
+            <li>Co-investment vehicles</li>
+            <li>Distribution corridors</li>
+            <li>Regulatory clearance</li>
+          </ul>
+          <a href="/services/trade" class="pipeline-card__link">Explore TRADE →</a>
+        </div>
+        <div class="pipeline-card reveal reveal-d4">
+          <span class="pipeline-card__number">04</span>
+          <h3 class="pipeline-card__title">PEOPLE</h3>
+          <p class="pipeline-card__subtitle">Workforce &amp; Relocation</p>
+          <hr class="gold-rule" aria-hidden="true">
+          <ul class="pipeline-card__list">
+            <li>Residency visa processing</li>
+            <li>30-day settlement package</li>
+            <li>Workforce recruitment</li>
+            <li>Housing coordination</li>
+          </ul>
+          <a href="/services/people" class="pipeline-card__link">Explore PEOPLE →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ PRINCIPAL MODEL -->
+  <section class="principal" aria-labelledby="principal-heading">
+    <div class="container">
+      <div class="principal__inner">
+        <div class="reveal">
+          <span class="section-label">Beyond Facilitation</span>
+          <h2 class="section-heading section-heading--white" id="principal-heading">
+            We Don't Just Open the Door.<br>We Walk Through It With You.
+          </h2>
+          <hr class="gold-rule" aria-hidden="true">
+          <p class="principal__body">
+            Most market-entry firms charge a fee and move on. We co-invest in the deals we originate — taking equity stakes, carried interest, and profit participation alongside our clients. Your success is built into our model.
+          </p>
+          <a href="/how-we-work" class="btn-secondary">See how we work →</a>
+        </div>
+        <div class="reveal reveal-d2">
+          <div class="tier-progression">
+            <p class="tier-progression__title">The Principal Model</p>
+            <div class="tier-item">
+              <span class="tier-item__number">01</span>
+              <div>
+                <h4 class="tier-item__title">Service Provider</h4>
+                <p class="tier-item__desc">Fixed fees and retainers. The operational foundation.</p>
+                <span class="tier-item__tag">Fixed fees</span>
+              </div>
+            </div>
+            <div class="tier-arrow">↓</div>
+            <div class="tier-item">
+              <span class="tier-item__number">02</span>
+              <div>
+                <h4 class="tier-item__title">Deal Architect</h4>
+                <p class="tier-item__desc">Success fees and carried interest. Mid-principal role.</p>
+                <span class="tier-item__tag">Success fees</span>
+              </div>
+            </div>
+            <div class="tier-arrow">↓</div>
+            <div class="tier-item">
+              <span class="tier-item__number">03</span>
+              <div>
+                <h4 class="tier-item__title">Principal Partner</h4>
+                <p class="tier-item__desc">Equity stakes and profit participation. Networks as capital.</p>
+                <span class="tier-item__tag">Equity + profit share</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ SPAIN STATS -->
+  <section class="stats-band" aria-label="Spain market statistics">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item"><div class="stat-item__number">€40B</div><div class="stat-item__label">Foreign direct investment into Spain, 2024</div></div>
+        <div class="stat-item"><div class="stat-item__number">3.2%</div><div class="stat-item__label">GDP growth — fastest major EU economy</div></div>
+        <div class="stat-item"><div class="stat-item__number">450M+</div><div class="stat-item__label">EU consumers accessible via Spanish entity</div></div>
+        <div class="stat-item"><div class="stat-item__number">€1.2B</div><div class="stat-item__label">Spanish LegalTech market, zero dominant player</div></div>
+      </div>
+      <p class="stats-band__caption reveal">
+        "Spain is the operating system through which the world accesses Europe. Costa Blanca Bridge is its most intelligent interface."
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ CASE STUDIES -->
+  <section class="section section--cream" aria-labelledby="cases-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">In Practice</span>
+        <h2 class="section-heading" id="cases-heading">From Ambition to Operation. In Weeks, Not Years.</h2>
+      </div>
+      <div class="cases-grid">
+        <div class="case-card case-card--dark reveal reveal-d1">
+          <span class="case-card__tag">LAND · Market Entry</span>
+          <h3 class="case-card__title">UK Manufacturing Consultancy Enters the EU</h3>
+          <p class="case-card__result">Post-Brexit, the company had lost EU contracts and needed a Spanish entity fast. CBB handled company formation, tax registration, and banking setup end-to-end — while the client kept running their UK operations.</p>
+          <div class="case-card__metric">
+            <span class="case-card__metric-number">21</span>
+            <span class="case-card__metric-label">days from brief to incorporated Spanish SL. EU client revenue restored within 90 days.</span>
+          </div>
+        </div>
+        <div class="case-card case-card--light reveal reveal-d2">
+          <span class="case-card__tag">PEOPLE · Digital Nomad</span>
+          <h3 class="case-card__title">Swedish Entrepreneur Gains Full EU Residency</h3>
+          <p class="case-card__result">A tech founder needed a legitimate EU base for both life and business. CBB secured the Digital Nomad Visa, opened a Spanish bank account, and formed a local SL — all without requiring the client to be in Spain first.</p>
+          <div class="case-card__metric">
+            <span class="case-card__metric-number">45</span>
+            <span class="case-card__metric-label" style="color:var(--color-mid-gray)">days to visa approval and banking operational. Now fully resident on the Costa Blanca.</span>
+          </div>
+        </div>
+      </div>
+      <div class="cases-cta reveal"><a href="/insights">See all case studies and insights →</a></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ CLOSING CTA -->
+  <section class="closing-cta" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="closing-cta__inner">
+        <h2 class="closing-cta__heading" id="cta-heading">Let's Build the Bridge Together.</h2>
+        <p class="closing-cta__sub">Connecting Worlds. Powering Prosperity.</p>
+        <div class="closing-cta__buttons">
+          <a href="/contact" class="btn-primary btn-primary--lg">Book a Discovery Call</a>
+          <a href="/contact#message" class="btn-secondary">Send us a message</a>
+        </div>
+        <p class="closing-cta__contact">
+          costablancabridge.com &nbsp;·&nbsp;
+          <a href="mailto:armando.ramirez.vila@gmail.com">Armando Ramirez Vila, CEO</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════ FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo-row">
+            <svg class="footer__logo-icon" viewBox="0 0 120 72" style="color:#C4965A;" aria-hidden="true">
+              <use href="#bridge-icon"/>
+            </svg>
+            <div class="footer__logo-name">
+              Costa Blanca Bridge
+              <span>Connecting Worlds</span>
+            </div>
+          </div>
+          <p class="footer__tagline">Connecting global capital, companies, and citizens to European opportunity through Spain.</p>
+          <div class="footer__social">
+            <a href="https://linkedin.com" aria-label="LinkedIn" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7A1.8 1.8 0 1 1 6.5 3a1.8 1.8 0 0 1 0 3.7zM20 19h-3v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8V19h-3V8h3v1.5c.4-.6 1.1-1.5 2.7-1.5 2 0 3.7 1.3 3.7 4.1V19z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Services</p>
+          <div class="footer__col-links">
+            <a href="/services/land">LAND — Market Entry</a>
+            <a href="/services/operate">OPERATE — Operations</a>
+            <a href="/services/trade">TRADE — Cross-Border</a>
+            <a href="/services/people">PEOPLE — Relocation</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Company</p>
+          <div class="footer__col-links">
+            <a href="/how-we-work">How We Work</a>
+            <a href="/about">About</a>
+            <a href="/insights">Insights</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <div class="footer__col-links">
+            <a href="/contact">Book a Discovery Call</a>
+            <a href="mailto:armando.ramirez.vila@gmail.com">armando.ramirez.vila@gmail.com</a>
+            <a href="https://costablancabridge.com">costablancabridge.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Costa Blanca Bridge. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════ JAVASCRIPT -->
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose  = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('is-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+    menuClose.addEventListener('click', closeMenu);
+    mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMenu(); });
+    function closeMenu() {
+      mobileMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Nav opacity on scroll
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 20
+        ? 'rgba(13, 35, 64, 0.99)'
+        : 'rgba(13, 35, 64, 0.96)';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
