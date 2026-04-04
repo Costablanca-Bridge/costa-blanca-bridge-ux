@@ -3,7 +3,7 @@
 **Version:** 1.0 · April 2026
 **Owner:** UX Lead
 
-These four personas represent the primary user segments CBB serves. Every UX decision should be tested against at least one of them. When designing a page or flow, ask: "Does this work for James? Would Sofia understand this? Would Mohammed find this trustworthy? Would Erik know what to do next?"
+These four personas represent the primary user segments Costa Blanca Bridge serves. Every UX decision should be tested against at least one of them. When designing a page or flow, ask: "Does this work for James? Would Sofia understand this? Would Mohammed find this trustworthy? Would Erik know what to do next?"
 
 ---
 
@@ -39,10 +39,10 @@ James built a successful consulting firm that helped European manufacturers opti
 - Decision-maker — no committee approval needed, can move fast once trust is established
 
 ### What Wins James
-A clear, step-by-step explanation of how CBB handles formation + ongoing compliance as a package. A specific case study from a UK firm similar to his. A fixed-fee or clearly explained pricing model. The ability to book a 30-minute discovery call without filling out a long form.
+A clear, step-by-step explanation of how Costa Blanca Bridge handles formation + ongoing compliance as a package. A specific case study from a UK firm similar to his. A fixed-fee or clearly explained pricing model. The ability to book a 30-minute discovery call without filling out a long form.
 
 ### Journey Stage at Arrival
-Usually Discovery or Consideration — he has researched CBB before arriving. Will consume 3–4 pages before contacting.
+Usually Discovery or Consideration — he has researched Costa Blanca Bridge before arriving. Will consume 3–4 pages before contacting.
 
 ### Key Screen: Homepage
 He needs to see "UK companies post-Brexit" called out explicitly. If he doesn't see his situation reflected in the first 10 seconds, he will leave.
@@ -74,7 +74,7 @@ Sofia runs a profitable 4-person UX studio entirely remotely. She has been livin
 - Needs everything to be doable from abroad (she can't fly to Spain to attend a meeting next week)
 
 ### Behaviours
-- Highly mobile, heavily online — discovers CBB via Instagram/LinkedIn or nomad community forums
+- Highly mobile, heavily online — discovers Costa Blanca Bridge via Instagram/LinkedIn or nomad community forums
 - Reads blog content and personal case studies (wants to see "someone like me" who went through it)
 - Comfortable with digital forms and online video calls — wants everything remote-first
 - Price-sensitive but not penny-pinching — will pay for quality and clarity
@@ -84,7 +84,7 @@ Sofia runs a profitable 4-person UX studio entirely remotely. She has been livin
 A clear visa comparison tool or guide ("Which visa is right for me?"). A relocation timeline showing 30–60 days from start to residency. A case study from a remote founder. Remote-first onboarding — no requirement to be physically present in Spain until necessary.
 
 ### Journey Stage at Arrival
-Usually Discovery — she finds CBB via content or recommendation, curious but not yet committed.
+Usually Discovery — she finds Costa Blanca Bridge via content or recommendation, curious but not yet committed.
 
 ### Key Screen: Relocation / PEOPLE Pipeline page
 She needs a clear breakdown of the visa options and what the 30–60 day process looks like. If she can see a timeline, she'll book immediately.
@@ -117,19 +117,19 @@ Mohammed's family business exports phosphates and agricultural goods. He has bee
 
 ### Behaviours
 - Arrives via referral or LinkedIn — does not respond to cold outreach
-- Will research CBB deeply before making first contact — checks LinkedIn, looks for credentials
+- Will research Costa Blanca Bridge deeply before making first contact — checks LinkedIn, looks for credentials
 - First contact will likely be a personal email or LinkedIn message, not a website form
-- Meetings will be formal and substantive — he will test CBB's knowledge in the first conversation
+- Meetings will be formal and substantive — he will test Costa Blanca Bridge's knowledge in the first conversation
 - Values direct, confident communication — hates waffle and excessive caveating
 
 ### What Wins Mohammed
-The Principal Model section — this is what differentiates CBB from every other firm he's spoken to. The CIS & Emerging Market credentials (wife's background in Russian steel/pharma, founder network in North Africa). A clear deal structure walkthrough — how an SPV is formed, how CBB participates, how compliance is maintained. Confidentiality handled explicitly.
+The Principal Model section — this is what differentiates Costa Blanca Bridge from every other firm he's spoken to. The CIS & Emerging Market credentials (wife's background in Russian steel/pharma, founder network in North Africa). A clear deal structure walkthrough — how an SPV is formed, how Costa Blanca Bridge participates, how compliance is maintained. Confidentiality handled explicitly.
 
 ### Journey Stage at Arrival
-Usually Consideration or Ready — he arrives knowing what CBB does. He wants proof and a direct path to a substantive conversation.
+Usually Consideration or Ready — he arrives knowing what Costa Blanca Bridge does. He wants proof and a direct path to a substantive conversation.
 
 ### Key Screen: How We Work / Principal Model page
-He needs to understand the equity/carried interest structure in detail. If the site only shows service tiers without the co-investment angle, he will not contact CBB.
+He needs to understand the equity/carried interest structure in detail. If the site only shows service tiers without the co-investment angle, he will not contact Costa Blanca Bridge.
 
 ---
 
@@ -169,10 +169,10 @@ Erik took early retirement two years ago. He and his wife have been visiting Cos
 Clear pricing or price ranges for the visa and setup package. A testimonial or case study from a retired couple in a similar situation. The 30–60 day relocation guarantee with a clear timeline. A human contact he can speak to. Tax guidance framed around his specific situation (pension income, Swedish residency change).
 
 ### Journey Stage at Arrival
-Usually Consideration — he has found CBB through research and is comparing services. Needs social proof and pricing clarity before contacting.
+Usually Consideration — he has found Costa Blanca Bridge through research and is comparing services. Needs social proof and pricing clarity before contacting.
 
 ### Key Screen: PEOPLE / Relocation Launchpad page + About page
-He wants to understand who is behind CBB and what their credentials are. The legal background of the co-founder will be specifically reassuring to him.
+He wants to understand who is behind Costa Blanca Bridge and what their credentials are. The legal background of the co-founder will be specifically reassuring to him.
 
 ---
 

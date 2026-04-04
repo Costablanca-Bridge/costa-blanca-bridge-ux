@@ -3,13 +3,13 @@
 **Version:** 1.0 · April 2026
 **Owner:** UX Lead
 
-These seven principles govern every design decision at CBB — across the website, client portal, AI employee interfaces, onboarding flows, and any other digital touchpoint. When two design options compete, these principles are the tiebreaker.
+These seven principles govern every design decision at Costa Blanca Bridge — across the website, client portal, AI employee interfaces, onboarding flows, and any other digital touchpoint. When two design options compete, these principles are the tiebreaker.
 
 ---
 
 ## Principle 1 — Trust is the Product
 
-CBB operates in cross-border legal, financial, and immigration territory. Every pixel must earn trust. Users are handing us their company structures, their immigration status, or their investment capital. The experience must feel safer than a law firm and more responsive than a bank.
+Costa Blanca Bridge operates in cross-border legal, financial, and immigration territory. Every pixel must earn trust. Users are handing us their company structures, their immigration status, or their investment capital. The experience must feel safer than a law firm and more responsive than a bank.
 
 **In practice:**
 - Show credentials, case studies, and real outcomes — not vague promises
@@ -22,7 +22,7 @@ CBB operates in cross-border legal, financial, and immigration territory. Every 
 
 ## Principle 2 — Clarity Over Cleverness
 
-Our clients are senior business people, investors, and professionals. They do not have time for ambiguity. The interface should communicate what CBB does and how to engage within 60 seconds of arrival.
+Our clients are senior business people, investors, and professionals. They do not have time for ambiguity. The interface should communicate what Costa Blanca Bridge does and how to engage within 60 seconds of arrival.
 
 **In practice:**
 - Headlines state the benefit, not describe the service
@@ -35,7 +35,7 @@ Our clients are senior business people, investors, and professionals. They do no
 
 ## Principle 3 — Global Audience, Local Warmth
 
-CBB's clients arrive from the UK, Netherlands, Russia, Cuba, North America, and across the emerging world. The UX must feel globally neutral and locally welcoming simultaneously.
+Costa Blanca Bridge's clients arrive from the UK, Netherlands, Russia, Cuba, North America, and across the emerging world. The UX must feel globally neutral and locally welcoming simultaneously.
 
 **In practice:**
 - No idioms or cultural references that won't translate
@@ -53,7 +53,7 @@ Not all users arrive equally ready. Some are researching. Some are ready to act.
 
 **Three user states to design for:**
 1. **Discovery** — browsing, comparing, learning. Need: reassurance and clarity
-2. **Consideration** — specific need identified, evaluating CBB. Need: proof and specificity
+2. **Consideration** — specific need identified, evaluating Costa Blanca Bridge. Need: proof and specificity
 3. **Ready** — wants to act now. Need: zero friction to contact/book
 
 **In practice:**
@@ -66,7 +66,7 @@ Not all users arrive equally ready. Some are researching. Some are ready to act.
 
 ## Principle 5 — Speed is Respect
 
-A slow website signals that the company doesn't value the user's time. CBB's tech-native positioning makes performance non-negotiable.
+A slow website signals that the company doesn't value the user's time. Costa Blanca Bridge's tech-native positioning makes performance non-negotiable.
 
 **In practice:**
 - Target: Lighthouse performance score ≥ 90 on mobile
@@ -80,7 +80,7 @@ A slow website signals that the company doesn't value the user's time. CBB's tec
 
 ## Principle 6 — Mobile is the Primary Canvas
 
-The majority of CBB's international audience will first encounter the brand on a mobile device. Every design starts at 375px width and scales up — never the reverse.
+The majority of Costa Blanca Bridge's international audience will first encounter the brand on a mobile device. Every design starts at 375px width and scales up — never the reverse.
 
 **In practice:**
 - Single-column layout on mobile is the default — multi-column is an enhancement
@@ -93,12 +93,12 @@ The majority of CBB's international audience will first encounter the brand on a
 
 ## Principle 7 — The AI-Native Standard
 
-CBB builds with AI. The UX must reflect that — not through decorative "AI" language, but through operational excellence: intelligent defaults, predictive content, and frictionless data capture that the AI layer can act on.
+Costa Blanca Bridge builds with AI. The UX must reflect that — not through decorative "AI" language, but through operational excellence: intelligent defaults, predictive content, and frictionless data capture that the AI layer can act on.
 
 **In practice:**
 - Intake forms are designed for AI processing — structured fields, not free-text wherever possible
 - Every form submission generates a structured object (JSON-compatible) that AI employees can act on immediately
-- Language in the UI helps users give CBB the right information — guided prompts, not blank fields
+- Language in the UI helps users give Costa Blanca Bridge the right information — guided prompts, not blank fields
 - Client portal (future) will show AI-generated progress summaries, not raw status flags
 - Never present AI capability as a gimmick — it shows in the speed and quality of response, not in the copy
 

@@ -8,9 +8,9 @@
 
 ## 1. What the Website Must Do
 
-The website is CBB's primary sales and trust-building asset. It must:
+The website is Costa Blanca Bridge's primary sales and trust-building asset. It must:
 
-1. **Establish credibility instantly** — a prospect arriving cold must understand who CBB is, what they do, and why they are different within 10 seconds
+1. **Establish credibility instantly** — a prospect arriving cold must understand who Costa Blanca Bridge is, what they do, and why they are different within 10 seconds
 2. **Reflect all four personas** — James, Sofia, Mohammed, and Erik must each see their situation reflected within the first scroll of the homepage
 3. **Explain the Principal Model** — the co-investment angle is the key differentiator; it must have a dedicated, clear page
 4. **Drive one action: book a discovery call** — every page ends with this CTA, with no competing actions

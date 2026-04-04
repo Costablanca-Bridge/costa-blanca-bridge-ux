@@ -71,4 +71,4 @@ Start here:
 3. Read `components/component-library.md` — the component system to build from
 4. Use `concept/homepage-concept.html` as the visual reference for the homepage
 
-The website should be **mobile-first**, **fast** (no unnecessary dependencies), and **conversion-focused**. Target metric: a prospect arriving from LinkedIn or Google should understand what CBB does and want to book a call within 60 seconds.
+The website should be **mobile-first**, **fast** (no unnecessary dependencies), and **conversion-focused**. Target metric: a prospect arriving from LinkedIn or Google should understand what Costa Blanca Bridge does and want to book a call within 60 seconds.

@@ -70,7 +70,7 @@ CostablancaBridge is a **principal bridge** — not an agency, not a consultancy
 ```
 font-family: 'Playfair Display', Cambria, Georgia, serif;
 ```
-Playfair Display is a sophisticated editorial serif that mirrors the Cambria used in CBB's internal documents. It conveys authority and permanence.
+Playfair Display is a sophisticated editorial serif that mirrors the Cambria used in Costa Blanca Bridge's internal documents. It conveys authority and permanence.
 
 **Body / Interface:**
 ```
@@ -107,7 +107,7 @@ Inter is the gold-standard for professional web interfaces. Highly legible, inte
 ## 4. Logo
 
 ### Primary Logo
-The CBB bridge icon with "Costa Blanca Bridge" wordmark and "Connecting Worlds" sub-tagline. Gold bridge on navy background.
+The Costa Blanca Bridge bridge icon with "Costa Blanca Bridge" wordmark and "Connecting Worlds" sub-tagline. Gold bridge on navy background.
 
 **File:** `IMG_2676 5.JPG` (in the root Costa Blanca Bridge folder)
 
