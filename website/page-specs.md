@@ -199,7 +199,7 @@ Each page spec defines: sections in order, content per section, component to use
    - Left: Corporate Legal Architect — deep cross-border regulatory credentials, photo placeholder
    - Right: Tech & Market Architect — global enterprise background, AI-native builder, photo placeholder
 3. **Network assets (white, 4 cards):** Spanish Government, Cuba & LatAm, CIS & Russian, Corporate & Industry
-4. **Why Costa Blanca Bridge (navy):** Short manifesto — "We built this company because we spent decades inside major global corporations and saw how broken cross-border expansion really is. Costa Blanca Bridge exists to fix that. We are AI-native, principal-led, and built to move at a speed that traditional firms cannot match."
+4. **Why Costa Blanca Bridge (navy):** Short manifesto — "We built this company because we spent decades inside global enterprises and saw firsthand how broken cross-border expansion really is. Costa Blanca Bridge exists to fix that. We are AI-native, principal-led, and built to move at a speed that traditional firms cannot match."
 5. **CTA (cream):** "Book a Discovery Call"
 
 ---
