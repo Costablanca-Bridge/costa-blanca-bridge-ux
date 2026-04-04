@@ -213,11 +213,29 @@ Each page spec defines: sections in order, content per section, component to use
 
 ---
 
-### Layout:
-- **Left (60%):** Calendly embed for direct booking
-- **Right (40%):** Simple contact form (name, email, phone, brief description, which service, how they heard about Costa Blanca Bridge)
-- **Below:** `costablancabridge.com · armando.ramirez.vila@gmail.com`
-- **Note:** Form output goes to structured JSON → triggers AI employee intake workflow
+### Layout & Content:
+- **Heading:** `Let's Build Your Bridge`
+- **Sub-heading:** `Book a call directly in our calendar, or send us a message and we'll reply within one business day.`
+- **Left (60%):** Calendly embed for direct booking.
+- **Right (40%):** Simple contact form.
+  - **Form fields:**
+    - Full Name (required)
+    - Email Address (required)
+    - Phone Number (optional)
+    - How can we help you? (required, textarea, 4 rows)
+  - **Button:**
+    - **Text:** `Send Message`
+  - **Legal Text:**
+    - `[Placeholder for privacy consent text to be provided by Clara Blanco]`
+- **Contact Info Below Form:**
+  - `armando.ramirez@costablancabridge.com`
+- **Form Submission Behavior:**
+  - **On Success:** Hide form, display success message.
+    - **Heading:** `Thank You`
+    - **Message:** `Your message has been sent. We will be in touch shortly.`
+  - **On Error:** Display error message below the button.
+    - **Message:** `Sorry, something went wrong. Please try again or email us directly.`
+- **Note:** Form submission sends a structured JSON payload to a secure Google Cloud Function endpoint. Engineering team to configure the specific URL.
 
 ---
 
