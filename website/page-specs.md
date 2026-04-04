@@ -10,7 +10,7 @@ Each page spec defines: sections in order, content per section, component to use
 
 ## PAGE 01 — Homepage `/`
 
-**Goal:** Any persona lands and within 10 seconds understands: what CBB does, who it's for, why to trust it, and what to do next.
+**Goal:** Any persona lands and within 10 seconds understands: what Costa Blanca Bridge does, who it's for, why to trust it, and what to do next.
 **Primary CTA:** Book a Discovery Call
 **Meta title:** CostablancaBridge — Connecting Worlds. Powering Prosperity.
 **Meta description:** The tech-powered bridge for companies and individuals accessing Europe through Spain. Legal services, market entry, cross-border deals, and workforce. Principal partner, not just a service provider.
@@ -130,7 +130,7 @@ Each page spec defines: sections in order, content per section, component to use
 
 ### Sections in order:
 1. **Hero (navy dark):** "Beyond Facilitation. We Cross the Bridge With You." + body paragraph explaining co-investment thesis
-2. **Three Tiers (cream, full-width cards):** Service Provider → Deal Architect → Principal Partner — each with revenue mechanism, example, and what CBB contributes
+2. **Three Tiers (cream, full-width cards):** Service Provider → Deal Architect → Principal Partner — each with revenue mechanism, example, and what Costa Blanca Bridge contributes
 3. **Why This Model (white):** Three-panel explanation of the three weaknesses of pure service firms (value cap, misalignment, commoditisation)
 4. **The Four Deal Archetypes (navy):** 2×2 grid — Emerging Market Trade Corridors, CIS Structures, Pharma Licensing, Real Estate Co-Investment — each with tag pill showing revenue type
 5. **How to Engage (cream):** Three steps — (1) Discovery call, (2) Confidential term sheet, (3) Structure + close
@@ -142,7 +142,7 @@ Each page spec defines: sections in order, content per section, component to use
 
 ## PAGE 03 — LAND Service Page `/services/land`
 
-**Goal:** James (UK company owner) is convinced CBB can handle his formation end-to-end and books a call.
+**Goal:** James (UK company owner) is convinced Costa Blanca Bridge can handle his formation end-to-end and books a call.
 **Primary CTA:** Book a Discovery Call
 **Meta title:** Company Formation in Spain | LAND | CostablancaBridge
 **SEO keywords:** set up company in Spain, Spanish SL formation, post-Brexit EU presence
@@ -174,7 +174,7 @@ Each page spec defines: sections in order, content per section, component to use
 
 ### Sections in order:
 1. **Hero (navy):** "Fully Settled in 30–60 Days. Guaranteed." — label "PEOPLE · RELOCATION & WORKFORCE"
-2. **Visa comparison table (cream):** Non-Lucrative / Digital Nomad / Entrepreneur / Golden Visa — columns: who it's for, income requirement, timeline, CBB fee indicator
+2. **Visa comparison table (cream):** Non-Lucrative / Digital Nomad / Entrepreneur / Golden Visa — columns: who it's for, income requirement, timeline, Costa Blanca Bridge fee indicator
 3. **The 30-Day Checklist (white):** Visual timeline — Week 1 / 2–3 / 4–6 / Month 2 with deliverables
 4. **Case Study 01 — Individuals (navy card):** Erik-type case — retired couple, NLV, full settlement
 5. **Case Study 02 — Founders (cream card):** Sofia-type case — digital nomad visa, SL formation, banking
@@ -188,7 +188,7 @@ Each page spec defines: sections in order, content per section, component to use
 
 ## PAGE 05 — About `/about`
 
-**Goal:** All personas verify who is behind CBB and are reassured by the credentials.
+**Goal:** All personas verify who is behind Costa Blanca Bridge and are reassured by the credentials.
 **Primary CTA:** Book a Discovery Call
 
 ---
@@ -196,10 +196,10 @@ Each page spec defines: sections in order, content per section, component to use
 ### Sections in order:
 1. **Hero (navy):** "An Unfair Advantage Built Over Decades." — one-paragraph company story
 2. **Founders (cream, 2-column):**
-   - Left: Corporate Legal Architect — credentials (BAT, pharma, Russian steel), photo placeholder
-   - Right: Tech & Market Architect — credentials (Siemens, AI-native, CBB builder), photo placeholder
+   - Left: Corporate Legal Architect — deep cross-border regulatory credentials, photo placeholder
+   - Right: Tech & Market Architect — global enterprise background, AI-native builder, photo placeholder
 3. **Network assets (white, 4 cards):** Spanish Government, Cuba & LatAm, CIS & Russian, Corporate & Industry
-4. **Why CBB (navy):** Short manifesto — "We built this company because we spent 30 years inside major corporations and saw how broken cross-border expansion really is."
+4. **Why Costa Blanca Bridge (navy):** Short manifesto — "We built this company because we spent decades inside major global corporations and saw how broken cross-border expansion really is. Costa Blanca Bridge exists to fix that. We are AI-native, principal-led, and built to move at a speed that traditional firms cannot match."
 5. **CTA (cream):** "Book a Discovery Call"
 
 ---
@@ -215,7 +215,7 @@ Each page spec defines: sections in order, content per section, component to use
 
 ### Layout:
 - **Left (60%):** Calendly embed for direct booking
-- **Right (40%):** Simple contact form (name, email, phone, brief description, which service, how they heard about CBB)
+- **Right (40%):** Simple contact form (name, email, phone, brief description, which service, how they heard about Costa Blanca Bridge)
 - **Below:** `costablancabridge.com · armando.ramirez.vila@gmail.com`
 - **Note:** Form output goes to structured JSON → triggers AI employee intake workflow
 
